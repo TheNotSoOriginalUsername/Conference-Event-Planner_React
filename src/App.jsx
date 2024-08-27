@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import ConferenceEvent from "./ConferenceEvent";
 import AboutUs from "./AboutUs";
 
 function App() {
+  // set page title
+  useEffect(() => {
+    document.title = "Conference Expense Planner";
+  }, []);
+
   const [showVenue, setShowVenue] = useState(false);
 
   const handleGetStarted = () => {
